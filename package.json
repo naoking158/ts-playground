@@ -1,0 +1,19 @@
+{
+  "name": "ts-playground",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "bun build src/index.ts --outdir dist --watch",
+    "serve": "bun --hot server.ts",
+    "bundle": "bun build src/index.ts --outdir dist --minify",
+    "fmt": "biome format --write ./src",
+    "lint": "biome lint ./src",
+    "tidy": "bun run fmt && bun run lint"
+  }
+}
